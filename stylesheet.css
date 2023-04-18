@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+section{
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.card{
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color:hsl(244, 38%, 16%) ;  
+    height: auto;
+    border-radius: 8px;
+    height: 50vh;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+.texte h1{
+    font-family: "lexend deca";
+    font-size: 1.7em;
+}
+.texte h1 span{
+    color: hsl(277, 64%, 61%);
+    
+}
+.texte p{
+    margin-top: 10%;
+    font-size: 0.8em;
+    font-family: "inter";
+    color:hsla(0, 0%, 100%, 0.75) ;
+}
+.number{
+display: flex;
+justify-content:space-between;
+margin-right: 30px;
+
+}
+.number span{
+    text-transform: lowercase;
+    color: #fff;
+    font-size: 1.7em;
+
+}
+.number h4{
+
+    margin-top:25%; 
+    align-self: center;
+    font-family: "inter";
+    font-weight: 400;
+text-transform: uppercase;
+font-size: 0.7em;
+color:hsla(0, 0%, 100%, 0.6) ;
+}
+.img{
+    
+    order: 3;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 0;
+    border-radius: 0 8px 8px 0;
+    background-image: url(images/image-header-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img::after{
+    content: "";
+    display: block;
+    background-color:hsla(277, 43%, 45%, 0.438) ;
+    border-radius: 8px;
+height: 100%;
+width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .card{
+        grid-template-rows: 30% 70%;
+        grid-template-columns: 100%;
+    margin: 5%;
+    margin-top: 10%;
+        height: 95vh;
+    }
+    .main{
+        margin: 10%;
+        margin-top: 0;
+        justify-content: center;
+        
+    }
+    .img{
+        grid-row-start:1 ;
+        border-radius: 8px 8px 0 0;
+    }
+    .number{
+        flex-direction: column;
+        text-align: center;
+    }
+    .number h4{
+        margin-top: 10%;   
+        
+    }
+    .img{ 
+        background-image: url(images/image-header-mobile.jpg);
+    }
+}
